@@ -9,10 +9,10 @@
 
         <br>
 
-        <div class="input-group mb-3">            
-            <input type="text" class="form-control" placeholder="What's on your mind?" aria-label="Recipient's username" aria-describedby="button-addon2" wire:model="newComment">
-            <button wire:click="add_comment" class="btn btn-info" type="button" id="button-addon2">Submit</button>
-        </div>
+        <form class="input-group mb-3" wire:submit.prevent="add_comment">            
+            <input type="text" class="form-control" placeholder="What's on your mind?" aria-label="Recipient's username" aria-describedby="button-addon2" wire:model.lazy="newComment">
+            <button type="submit" class="btn btn-info" type="button" id="button-addon2">Submit</button>
+        </form>
 
         <br>
         <!-- Commnet Box -->
